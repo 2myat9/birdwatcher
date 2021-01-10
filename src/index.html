@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birdwatcher</title>
+    <link
+      rel="icon"
+      href="https://img.icons8.com/fluent/48/000000/sparrowhawk.png"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="view-container">
+      <div class="title">
+        <h1>BirdWatcher</h1>
+      </div>
+      <div class="color-picker">
+        <label for="theme-color"> Change Theme: </label>
+        <input
+          id="theme-color"
+          type="color"
+          name="theme-color"
+          value="#ffa931"
+        />
+      </div>
+      <div class="view">
+        <div class="background">
+          <img
+            src="https://images.unsplash.com/photo-1597369422072-cd990b2ecb24?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2090&q=80"
+            alt="forest background image"
+          />
+        </div>
+        <img
+          class="bird-one-image"
+          src="./images/birdcouple.png"
+          alt="an image of two birds"
+        />
+        <img
+          class="bird-two-image"
+          src="./images/hummingbird.png"
+          alt="an image of a hummingbird"
+        />
+      </div>
+      <div class="controls">
+        <div>
+          <label for="bird-one-top">Top:</label>
+          <input
+            id="bird-one-top"
+            type="range"
+            name="bird-one-top"
+            min="-100"
+            max="300"
+            value="240"
+            data-sizing="px"
+          />
+        </div>
+
+        <div>
+          <label for="bird-one-left">Left:</label>
+          <input
+            id="bird-one-left"
+            type="range"
+            name="bird-one-left"
+            min="-200"
+            max="900"
+            value="-100"
+            data-sizing="px"
+          />
+        </div>
+
+        <div>
+          <label for="bird-two-top">Top:</label>
+          <input
+            id="bird-two-top"
+            type="range"
+            name="bird-two-top"
+            min="-200"
+            max="400"
+            value="-160"
+            data-sizing="px"
+          />
+        </div>
+
+        <div>
+          <label for="bird-two-left">Left:</label>
+          <input
+            id="bird-two-left"
+            type="range"
+            name="bird-two-left"
+            min="-300"
+            max="700"
+            value="600"
+            data-sizing="px"
+          />
+        </div>
+
+        <div class="focus-container">
+          <label for="focus">Focus:</label>
+          <input
+            id="focus"
+            type="range"
+            name="focus"
+            min="-20"
+            max="50"
+            value="10"
+            data-sizing="px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "birdwatcher",
+  "version": "1.0.0",
+  "description": "simulate bird watching :)",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build index.html",
+    "dev": "parcel index.html"
+  },
+  "author": "Htoomyat Naing",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  }
+}

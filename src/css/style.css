@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bird-one-top: 240px;
+  --bird-one-left: -100px;
+  --focus: 20px;
+  --bird-two-top: -160px;
+  --bird-two-left: 600px;
+  --theme-color: #ffa931;
+}
+
+body {
+  background-color: #011910;
+  overflow: hidden;
+  color: var(--theme-color);
+  font-family: "IM Fell DW Pica SC", serif;
+}
+
+.view-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.view {
+  position: relative;
+  width: 800px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 80px;
+}
+
+.bird-one-image {
+  position: absolute; /* associte this image with "view" */
+  display: block;
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+
+  /* determines visibility */
+  left: var(--bird-one-left);
+  top: var(--bird-one-top);
+  filter: blur(var(--focus));
+}
+
+.bird-two-image {
+  position: absolute; /* associte this image with "view" */
+  display: block;
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+
+  /* determines visibility */
+  left: var(--bird-two-left);
+  top: var(--bird-two-top);
+  filter: blur(var(--focus));
+}
+
+.controls {
+  font-size: 20px;
+  margin-top: 50px;
+  max-width: 850px;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.focus-container {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 2;
+  justify-self: center;
+  margin-top: 20px;
+}
+
+input[type="range"] {
+  width: 300px;
+  -webkit-appearance: none;
+  background-color: var(--theme-color);
+}
+
+.controls label {
+  padding-right: 15px;
+}
+
+.title {
+  margin-bottom: 60px;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.color-picker {
+  margin-bottom: 30px;
+  font-size: 20px;
+}

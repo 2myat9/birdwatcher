@@ -13,15 +13,19 @@
 
 body {
   background-color: #011910;
-  overflow: hidden;
+  overflow: auto;
   color: var(--theme-color);
   font-family: "IM Fell DW Pica SC", serif;
+
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .view-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100%;
   min-width: 100vw;
   align-items: center;
   justify-content: center;
@@ -68,21 +72,22 @@ body {
 
 .controls {
   font-size: 20px;
-  margin-top: 50px;
+  margin-top: 25px;
+  margin-bottom: 0;
   max-width: 850px;
   padding: 20px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 10px;
 }
 
 .focus-container {
   grid-row: 3 / span 1;
   grid-column: 1 / span 2;
   justify-self: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 input[type="range"] {
@@ -96,7 +101,7 @@ input[type="range"] {
 }
 
 .title {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   font-size: 30px;
   letter-spacing: 3px;
 }
